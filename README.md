@@ -4,10 +4,24 @@
 [![](https://img.shields.io/github/actions/workflow/status/soenneker/soenneker.extensions.spans.readonly.parameterinfos/codeql.yml?label=CodeQL&style=for-the-badge)](https://github.com/soenneker/soenneker.extensions.spans.readonly.parameterinfos/actions/workflows/codeql.yml)
 
 # ![](https://user-images.githubusercontent.com/4441470/224455560-91ed3ee7-f510-4041-a8d2-3fc093025112.png) Soenneker.Extensions.Spans.Readonly.ParameterInfos
-### Helpful extension methods surrounding ReadOnlySpan of ParameterInfo
+Helpful extension methods surrounding ReadOnlySpan of ParameterInfo.
 
 ## Installation
 
-```
+```bash
 dotnet add package Soenneker.Extensions.Spans.Readonly.ParameterInfos
 ```
+
+## Quick start
+
+```csharp
+using Soenneker.Extensions.Spans.Readonly.ParameterInfos;
+
+// Given an existing ReadOnlySpan<ParameterInfo> named parameterInfos:
+var result = parameterInfos.ToTypes();
+```
+
+## Common operations
+
+- `ToTypes()` - Converts a span of `ParameterInfo` into an array of their corresponding `Type` objects.
+- `FillTypes()` - Fills the destination span with the corresponding `Type` for each parameter (no allocations).
