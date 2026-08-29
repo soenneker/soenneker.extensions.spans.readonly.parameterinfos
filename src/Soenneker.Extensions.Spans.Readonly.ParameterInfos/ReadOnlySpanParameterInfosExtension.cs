@@ -13,6 +13,7 @@ public static class ReadOnlySpanParameterInfosExtension
     /// <summary>
     /// Converts a span of <see cref="ParameterInfo"/> into an array of their corresponding <see cref="Type"/> objects.
     /// </summary>
+    /// <returns>Converts a span of <see cref="ParameterInfo"/> into an array of their corresponding <see cref="Type"/> objects.</returns>
     [Pure]
     public static Type[] ToTypes(this ReadOnlySpan<ParameterInfo> parameterInfos)
     {
